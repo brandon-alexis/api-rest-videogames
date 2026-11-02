@@ -1,10 +1,11 @@
+import 'dotenv/config'
 import express from 'express'
 import cors from 'cors'
 import logger from 'morgan'
 import { v4 as uuid } from 'uuid'
 
 const app = express();
-const  PORT = 3000;
+const  PORT = process.env.PORT ?? 3000;
 
 // Middlewares
 app.use(cors());
